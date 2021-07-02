@@ -2,9 +2,8 @@
 
 yolo_rustc_bootstrap::do_crimes!();
 
-#[cfg(yolo_rustc_bootstrap)]
 #[macro_export]
-#[allow_internal_unstable(allow_internal_unstable)]
+#[cfg_attr(yolo_rustc_bootstrap, allow_internal_unstable(allow_internal_unstable))]
 macro_rules! nightly_crimes {
     (
         #![feature($($a:ident),* $(,)?)]
