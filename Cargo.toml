@@ -1,7 +1,7 @@
 [package]
 name = "nightly-crimes"
 description = "Please do not use this."
-version = "1.0.0"
+version = "1.0.1"
 edition = "2018"
 license = "BSD-2-Clause"
 repository = "https://github.com/m-ou-se/nightly-crimes"
