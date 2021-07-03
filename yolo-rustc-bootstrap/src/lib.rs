@@ -17,7 +17,6 @@ pub fn do_crimes(_: proc_macro::TokenStream) -> proc_macro::TokenStream {
             println!("\x1b[1;32m     Abusing\x1b[m proc macros");
             println!("\x1b[1;32m    Enabling\x1b[m the forbidden environment variable");
             println!("\x1b[1;32m    Tricking\x1b[m rustc {}", version);
-            println!("\x1b[1;32m  Destroying\x1b[m stability guarantees");
             if let (Ok(c), Ok(v)) = (
                 std::env::var("CARGO_PKG_NAME"),
                 std::env::var("CARGO_PKG_VERSION"),
@@ -44,5 +43,8 @@ pub fn do_crimes(_: proc_macro::TokenStream) -> proc_macro::TokenStream {
 
         std::process::exit(status.code().unwrap_or(101));
     }
+
+    println!("\x1b[1;32m  Destroying\x1b[m stability guarantees");
+
     Default::default()
 }
